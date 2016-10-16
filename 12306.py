@@ -13,9 +13,10 @@ Example:
 
 """
 from docopt import docopt
-from TrainCollection import TrainCollection
+from Tickets import Tickets
 import requests
 import re
+
 requests.packages.urllib3.disable_warnings()
 
 
@@ -34,8 +35,9 @@ def cli():
     )
     r = requests.get(url, verify=False)
     rows = r.json()['data']['datas']
-    trains = TrainCollection(rows)
-    trains.pretty_print()
+    tickets = Tickets(rows)
+    tickets.pretty_print()
+
 
 if __name__ == '__main__':
     cli()

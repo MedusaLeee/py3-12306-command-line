@@ -9,6 +9,16 @@ python3.5
 
 sudo pip3 install requests prettytable docopt
 
+## 运行
+
+sudo chmod +x 12306.py
+
+./12306.py 泰安 北京 2016-10-17
+
+## 效果图
+
+![12306](./image/12306.png)
+
 ## 相关知识
 
 ### python设置文字输出颜色

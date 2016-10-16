@@ -2,7 +2,7 @@
 from prettytable import PrettyTable
 
 
-class TrainCollection(object):
+class Tickets(object):
     header = ["车次", "出发\到达站", "出发\到达时间", "历时", "一等座", "二等座", "软卧", "硬卧", "软座", "硬座", "无座"]
 
     def __init__(self, rows):
