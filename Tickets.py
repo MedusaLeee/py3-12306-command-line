@@ -33,41 +33,42 @@ class Tickets(object):
     @property
     def trains(self):
         for row in self.rows:
+            row_data = row["queryLeftNewDTO"]
             train = [
                 # 车次
-                row['station_train_code'],
+                row_data['station_train_code'],
 
                 # 出发、到达站
-                '\n'.join([self.colored('green', row['from_station_name']),
-                           self.colored('red', row['to_station_name'])]),
+                '\n'.join([self.colored('green', row_data['from_station_name']),
+                           self.colored('red', row_data['to_station_name'])]),
 
                 # 出发、到达时间
-                '\n'.join([self.colored('green', row['start_time']),
-                           self.colored('red', row['arrive_time'])]),
+                '\n'.join([self.colored('green', row_data['start_time']),
+                           self.colored('red', row_data['arrive_time'])]),
 
                 # 历时
-                self._get_duration(row),
+                self._get_duration(row_data),
 
                 # 一等坐
-                row['zy_num'],
+                row_data['zy_num'],
 
                 # 二等坐
-                row['ze_num'],
+                row_data['ze_num'],
 
                 # 软卧
-                row['rw_num'],
+                row_data['rw_num'],
 
                 # 硬卧
-                row['yw_num'],
+                row_data['yw_num'],
 
                 # 软坐
-                row['yw_num'],
+                row_data['yw_num'],
 
                 # 硬坐
-                row['yz_num'],
+                row_data['yz_num'],
 
                 # 无座
-                row['wz_num']
+                row_data['wz_num']
             ]
             yield train
 
