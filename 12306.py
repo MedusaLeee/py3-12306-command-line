@@ -9,7 +9,7 @@ Options:
     -h,--help   显示帮助菜单
 
 Example:
-    12306.py beijing shanghai 2016-08-25
+    12306.py 泰安 北京 2016-10-25
 """
 from docopt import docopt
 from Tickets import Tickets
