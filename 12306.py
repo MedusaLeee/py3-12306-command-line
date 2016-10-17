@@ -3,14 +3,13 @@
 """12306 tickets query via command-line.
 
 Usage:
-    12306.py [-gdtkz] <from> <to> <date>
+    12306.py <from> <to> <date>
 
 Options:
     -h,--help   显示帮助菜单
 
 Example:
-    tickets beijing shanghai 2016-08-25
-
+    12306.py beijing shanghai 2016-08-25
 """
 from docopt import docopt
 from Tickets import Tickets
