@@ -29,7 +29,7 @@ def cli():
     from_station = station.get(arg['<from>'])
     to_station = station.get(arg['<to>'])
     date = arg['<date>']
-    url = "https://kyfw.12306.cn/otn/leftTicket/queryC?leftTicketDTO.train_date={}" \
+    url = "https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date={}" \
           "&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT"
     url = url.format(
         date, from_station, to_station
